@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solo Travel</title>
+    <style>
+        body {
+        background-image: linear-gradient(
+          to top,
+          rgb(166, 226, 229) 0%,
+          rgb(198, 232, 221) 100%
+        );
+      }
+        h1,
+        h2{text-align: center;
+            color: #4cb493;
+        }
+        h1{
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 32px;
+        }
+        h2{
+            font-weight: lighter;
+            font-family: cursive;
+            font-size: 28px;
+        }
+        hr{
+            background-color: #4cb493;
+            color: #4cb493;
+            padding: 4px;
+            margin: 6px;
+            border-radius: 10px;
+        }
+        button{
+           display: block;
+           margin: 25px auto;
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           font-size: 15px;
+           color: #DFDDEF;
+           background-color: #4cb493;
+           border: 1px solid #4cb493;
+           border-radius: 30px;
+           padding: 15px 10px;
+           transition: all 200ms ease-in;
+           box-shadow: rgb(136, 136, 136) 0px 8px 8px 0;
+           cursor: pointer; 
+        }
+       
+        button:hover{
+           background-color: #cbdfd9; 
+           color: #4cb493;
+           border: 1px solid #4cb493;
+        }
+        .header{
+            display: block;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .solo{
+            display: block;
+            margin: 0 auto; 
+            padding: 30px 20px 50px 20px;
+            border-radius: 80%;
+            
+        }
+        .travel{
+           background-color: #4EB1FD;
+           text-align: center;
+           color: #DFDDEF;
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           font-size: 16px;
+           padding: 20px 10px 20px 10px;
+           margin: 0 auto;
+           max-width: 500px;
+           border-radius: 10px;
+           box-shadow: rgb(199, 198, 198) 0px 5px 5px 0;
+        }
+        
+        
+        .footer{
+            font-size: x-small;
+            padding: 10px;
+            text-align: center;
+            color: #4cb493;
+            font-family: monospace;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="header"><h1>
+    <hr>
+    <strong>Interested in Solo Travel?</strong>
+    </h1>
+    <h2><em>Discover your own wanderlust!✨</em>
+    <hr>
+    </h2>
+    </div>
+    <img class="solo"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/461/original/solo-asia.jpg_.jpg?1637546793"
+      alt="Wanderlust"
+      width="600"
+    />
+    <div class="travel">
+    <p>
+      Traveling solo is absolute freedom. Have you ever thought of taking a trip on your
+      own? This is one of the best ways to see the world! An opportunity to find
+      your soul and create personal growth. Along the way, you'll meet many new
+      friends among the other adventurers.
+    </br>
+    </br>
+    Learn more
+    <a href= "https://wikitravel.org/en/Travelling_alone"
+    target="_blank">
+    here
+    </a>
+    </p>
+    </div>
+    
+    <button>
+      Find your next destination  
+    </button>
+    <div class="footer">
+    <p>
+        <small>This page was built by Kelsey</small> 
+    </p>
+    </div>
+  </body>
+  <script>
+      function city (){
+      let name = prompt("What is your name?")
+      let whereTo = prompt("Do you like hot or cold weather most?");
+      whereTo = whereTo.toLocaleLowerCase();
+      if (whereTo === "hot"){
+          alert (name + " you should explore Bali, Indonesia ☀️");
+      } else if (whereTo === "cold"){
+          alert (name + " you should explore Alaska ❄️");
+      } 
+      else {
+          alert (name + " it looks like travel isn't for you 🙁");
+      }
+    }
+      let destination=document.querySelector("button");
+      destination.addEventListener("click", city);
+  </script>
+</html>
